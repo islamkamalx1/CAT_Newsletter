@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --tomato-primary: hsl(4, 100%, 67%);
+  --dark-neutral: hsl(234, 29%, 20%);
+  --charcoal-neutral: hsl(235, 18%, 26%);
+  --grey-neutral: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--charcoal-neutral);
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: var(--dark-neutral);
+  color: white;
+  padding: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.info {
+  padding: 30px 20px;
+}
+
+.info h1 {
+  font-size: 48px;
+}
+.info p {
+  margin: 25px 0;
+}
+ul li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form > div {
+  display: flex;
+  justify-content: space-between;
+}
+label {
+  color: var(--dark-neutral);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+input {
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  border: 1px solid var(--grey-neutral);
+  border-radius: 6px;
+}
+input:focus {
+  outline: none;
+}
+
+.error-msg {
+  color: var(--tomato-primary);
+  font-weight: bold;
+}
+
+.input-invalid {
+  border: 2px solid var(--tomato-primary);
+  background-color: coral;
+  color: white;
+}
+
+.success {
+  max-width: 400px;
+  padding: 20px;
+}
+.success h1 {
+  font-size: 48px;
+}
+.success p {
+  margin: 30px 0;
+}
+.success .btn {
+  width: 100%;
+}
+.success img {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  body {
+    display: block;
+  }
+  main {
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .info {
+    order: 2;
+  }
+  main > img {
+    order: 1;
+    height: 300px;
+    object-fit: cover;
+  }
+
+}
